@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTFuck offF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version 1</title>
+    <!-- External styling : CSS -->
+    <link rel="stylesheet" href="/css/v1.css">
+    <!-- Internal Styling : CSS -->
+    <style>
+        .title {
+            color: rgb(85, 183, 85);
+        
+        }
+        .p p:nth-child(2){
+            color: red;
+        }
+
+        .main-flex-container {
+            margin-top: 40px;
+            border: 3px solid black;
+            border-radius: 5px;
+            background-color: white;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: c; */
+            /* align-items: flex-start; */
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        
+        .ex-box {
+            border: 1px solid black;
+            background-color: #eee;
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+            border-radius: 5px;
+            margin: 10px;
+            display: flex;
+            /* align-self: center; */
+            /* justify-items: center; */
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Inline Styling : CSS -->
+    <h1 style="margin: 0px; color: rgb(89, 89, 167);">Hello World</h1>
+    <h2 class="title">Testing</h2>
+    <div>
+        <p>
+            p2
+        </p>
+        <p>
+            p1
+        </p>
+    </div>
+    <div class="p">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+    </div>
+    <div class="main-flex-container">
+        <div class="ex-box">
+                box1
+        </div>
+        <div class="ex-box">
+                box-2
+        </div>
+        <div class="ex-box">
+            box-3
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -33,7 +33,7 @@
                 I am a B.Tech student who is passionate about security and building robust, useful software.
             </p>
             <div class="collab-btn">
-                <button class="about-button"><a href="https://minheinthu.github.io/portfolio-min/">Let's collabrate together</a></button>
+                <button class="about-btn"><a href="https://minheinthu.github.io/portfolio-min/">Let's collabrate together</a></button>
             </div>
        </div>
         <div class="profile-image">
@@ -43,19 +43,36 @@
      
      <!-- Skills -->
       <seciton id="skill">
+        <div class="skill-head">
+            <h1>SKILLS</h1>
+        </div>
         <div class="skill-list">
             <ul>
                 <li>
-                    Python
+                    Programming Language
                     <ol>
-                        <li>Intermediate</li>
+                        <li>Python</li>
+                        <li>SQL : Query Language</li>
                     </ol>
                 </li>
-                <li>SQL</li>
-                <li>HTML & CSS</li>
-                <li>Git & GitHub</li>
-                <li>PostgreSQL</li>
-                <li>SQL</li>
+                <li>DataBase
+                    <ol>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                    </ol>
+                </li>
+                <li>Web Design
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ol>
+                </li>
+                <li>
+                    Version Control
+                    <li>Git & GitHub</li>
+                </li>
+
             </ul>
         </div>
     </seciton>
@@ -186,14 +203,27 @@
             </tbody>
         </table>
     </section>
-    <section id="contact">
+    <footer id="contact">
         <form action="">
-            <fieldset>
-                <legend>Get In Touch
-                    
-                </legend>
-            </fieldset>
+            <div class="contact-form">
+                <h1>Get In Touch</h1>
+                <p>Let's collabrate together</p> 
+            </div>
+            <div>
+                 <fieldset>
+                    <!-- <legend>Get In Touch
+                    </legend> -->
+                    <label for="name">Name*</label><br>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+                    <br>
+                    <label for="email">Email*</label><br>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required><br>
+                    <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+                    <br>
+                    <button class="form-btn" type="submit">Send</button>
+                </fieldset>
+            </div>
         </form>
-    </section>
+    </footer>
 </body>
 </html>
