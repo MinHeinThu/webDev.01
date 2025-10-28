@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Roboto", sans-serif;
+    font-weight: 500; */
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+/* .grid-container {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: 100px 100px;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-picture {
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    height: 200px;
+} */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    background-color: antiquewhite;
+    /* justify-items: center;   align items horizontally */
+    /* align-items: center;     align items vertically */
+}
+
+.grid-box {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(241, 101, 101);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box1 {
+    grid-column: 4 / -1;
+    grid-row: 6 / -1;
+}
