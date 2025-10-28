@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    width: 1440px;
+    height: 1660px;
+    background-color: #FFFFFF;
+    color: #FF7B54;
+}
+
+/* This part is styling the navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 30px 60px 0px 60px;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    height: 48;
+}
+
+.logo h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 100%;
+    font-family: 'Inter Bold', sans-serif;
+}
+
+.nav-link ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 36px;
+}
+
+.nav-link {
+    width: 50%;
+}
+
+.nav-li {
+    list-style-type: none;
+    font-size: 20px;
+    font-family: 'Inter Regular', sans-serif;
+    font-weight: 400;
+
+}
+
+li a {
+    text-decoration: none;
+    color: #FF7B54;
+}
+
+/* Section */
+
+.speaker-heading {
+    width: 480px;
+    height: 119px;
+    font-family: 'Inter Bold', sans-serif;
+    font-size: 98px;
+    line-height: 100%;
+    margin-left: 154px;
+    margin-top: 151px;
+}
+
+.speaker-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left:158px;
+    margin-top: 95px;
+}
+.speaker-details {
+    margin-bottom: 168px;
+}
+.speaker-details h2 {
+    margin-top: 36px;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Inter Bold', sans-serif;
+    line-height: 100%;
+}
+
+.speaker-details h3{
+    margin-top: 20px;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Inter Regular', sans-serif;
+    line-height: 100%;   
+}
+
+.speaker-details p {
+    width: 462px;
+    height: 120px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Inter Regular', sans-serif;
+    line-height: 100%;
+}
