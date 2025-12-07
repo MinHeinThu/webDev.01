@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime World</title>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <!-- Heading Container : Menu Logo Search Login -->
+    <div class="header-container">
+      <div class="menu">
+        <button><img src="img/menu.png" alt="menu" /></button>
+      </div>
+      <header>Anime <span>World</span></header>
+
+      <!-- Desktop Version -->
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Movies</a></li>
+          <li><a href="">TV Series</a></li>
+          <li><a href="">Most Popular</a></li>
+          <li><a href="">Genres</a></li>
+        </ul>
+      </nav>
+      <div class="serach-icon">
+        <button><img src="img/search-icon.png" alt="search-icon" /></button>
+      </div>
+      <button class="header-btn">Login</button>
+    </div>
+
+    <!-- Trend Container : Top Anime Movies or Series -->
+    <div class="trend-container">
+      <h2># Trending</h2>
+      <div class="trend-anime">
+        <div class="anime-box">
+          <div class="box box1">1</div>
+          <img src="img/onepiece.png" alt="top_one_poster" />
+        </div>
+        <div class="anime-box">
+          <div class="box box2">2</div>
+          <img src="img/naruto2.png" alt="top_two_poster" />
+        </div>
+        <div class="anime-box">
+          <div class="box box3">3</div>
+          <img src="img/aot.png" alt="top_three_poster" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendation Container -->
+    <div class="recommend">
+      <h2># Recommendation</h2>
+
+      <div class="slides-container">
+        <div class="slide active">
+          <img src="img/bleach2.png" alt="Bleach" class="slide-img" />
+        </div>
+        <div class="slide">
+          <img
+            src="img/vinland-saga.png"
+            alt="Vinland Saga"
+            class="slide-img"
+          />
+        </div>
+        <div class="slide">
+          <img src="img/ippo.png" alt="Ippo" class="slide-img" />
+        </div>
+        <div class="slide">
+          <img
+            src="img/demon-salyer.png"
+            alt="Demon Slayer"
+            class="slide-img"
+          />
+        </div>
+        <div class="slide">
+          <img src="img/jujutus.png" alt="Jujutsu Kaisen" class="slide-img" />
+        </div>
+
+        <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+
+        <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+
+        <div class="dots-container">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+    <!-- Genres Link -->
+    <div class="genres">
+      <h2># Genres</h2>
+      <div>
+        <div class="genres-link">
+          <ul>
+            <li><a href="">Action</a></li>
+            <li><a href="">Isekai</a></li>
+            <li><a href="">Comendy</a></li>
+            <li><a href="">Adventure</a></li>
+            <li><a href="">Magic</a></li>
+            <li><a href="">Kids</a></li>
+            <li><a href="">Horror</a></li>
+            <li><a href="">Drama</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".dot");
+      let slideTimer; // Variable to store the automatic timer
+
+      // Start the slider immediately
+      showSlides(slideIndex);
+      startAutoSlide();
+
+      // Function to handle Next/Prev buttons
+      function changeSlide(n) {
+        slideIndex += n;
+
+        // Wrap around if we go past the end or beginning
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        }
+        if (slideIndex < 0) {
+          slideIndex = slides.length - 1;
+        }
+
+        showSlides(slideIndex);
+        resetTimer(); // Reset timer so it doesn't jump immediately after you click
+      }
+
+      // Function to handle Dot clicks
+      function currentSlide(n) {
+        slideIndex = n;
+        showSlides(slideIndex);
+        resetTimer();
+      }
+
+      // Main logic to show the correct slide
+      function showSlides(n) {
+        // 1. Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+        }
+
+        // 2. Remove "active-dot" color from all dots
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("active-dot");
+        }
+
+        // 3. Show the current slide and highlight the current dot
+        slides[n].classList.add("active");
+        dots[n].classList.add("active-dot");
+      }
+
+      // Automatic Slideshow function
+      function startAutoSlide() {
+        slideTimer = setInterval(function () {
+          changeSlide(1); // Call "Next Slide" every 4 seconds
+        }, 4000);
+      }
+
+      // Reset the timer when user manually clicks (for better UX)
+      function resetTimer() {
+        clearInterval(slideTimer); // Stop the old timer
+        startAutoSlide(); // Start a new timer
+      }
+    </script>
+  </body>
+</html>

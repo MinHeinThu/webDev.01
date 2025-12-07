@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Inter:opsz,wght@14..32,700&display=swap");
+
+/* Css variables */
+:root {
+  --fs-body: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --fs-h1: clamp(1rem, 1rem + 4vw, 2rem);
+  --fs-h2: clamp(1.5rem, 0.5rem + 3vw, 2.5rem);
+}
+
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", monospace, sans-serif;
+}
+
+.header-container {
+  background-color: #224f99;
+  width: 100%;
+  height: 115px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  color: #ffffff;
+}
+
+header > span {
+  font-family: "combo", sans-serif;
+  font-weight: 700;
+}
+
+.header-btn {
+  background-color: #6ba4ff;
+  color: #ffffff;
+  border: 1px solid #6ba4ff;
+  border-radius: 10px;
+  padding: 9px 20px;
+  font-weight: 700;
+}
+
+div > button {
+  background-color: #224f99;
+  border: none;
+}
+
+/* Top Anime or Series */
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  padding: 25px 0 25px 10px;
+  color: #996D12;
+}
+
+.trend-anime {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.anime-box > img {
+  width: 119px;
+  height: 163px;
+}
+
+.box {
+  position: absolute;
+  background-color: #224f99;
+  color: #ffffff;
+  border: 1px solid #224f99;
+  padding: 4px;
+}
+
+/* Recommendation */
+/* Ensure the container is relative so buttons stay inside */
+.slides-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+/* --- Arrow Buttons Styling --- */
+.prev-btn, .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;           /* Move to vertical middle */
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;  /* Exact center alignment adjustment */
+  color: white;       /* White arrow */
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border: none;
+  background-color: rgba(0,0,0,0.3); /* Semi-transparent black background */
+  user-select: none;
+  z-index: 2;         /* Sit on top of images */
+}
+
+/* Position "Next" button to the right */
+.next-btn {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position "Prev" button to the left */
+.prev-btn {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Add a black background on hover */
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* --- Dots Styling --- */
+.dots-container {
+  position: absolute;
+  bottom: 15px;       /* Position at bottom of image */
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb; /* Grey color */
+  border-radius: 50%;     /* Make it a circle */
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+  background-color: #E6B249; /* Gold color (Your Theme!) */
+}
+
+/* Genres Link */
+
+.genres > div {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genres-link {
+  background-color: #6ba4ff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 372px;
+  height: 201px;
+}
+
+.genres-link ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+/* Mobile */
+
+@media (max-width: 999px) {
+    nav {
+        display: none;
+    }
+}
+
+/* Desktop Version */
+
+@media (min-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  header {
+    font-size: var(--fs-h1);
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  a {
+    color: #E6B249;
+  }
+
+  li>a:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #E6B249;
+  }
+
+  li>a:active {
+    color: #ffffff;
+    border-bottom: 1px solid #E6B249;
+  }
+
+  nav ul {
+    list-style: none;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+  }
+
+
+  .genres {
+    display: none;
+  }
+}
